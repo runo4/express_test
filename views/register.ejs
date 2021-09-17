@@ -3,36 +3,37 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet"  href="css/style.css">
-        <title>top</title>
+        <title>アカウント新規作成</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/login.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <header></header>
         <div class="main-wrapper">
             <div class="container">
                 <div class="heading">
-                    <h1>Node.js勉強用テスト会員ページ</h1>
+                    <h1>アカウント新規作成画面</h1>
                 </div>
                 <div class="body">
                     <div class="login-form">
                         <form class="form" action="/" method="post">
                             <div class="input-area">
-                                <input class="textbox require" id="input-id"type="text" name="loginId">
+                                <input class="textbox input-id require" type="text" name="loginId">
                                 <p class="label label-id">ID</p>
                             </div>
                             <div class="input-area">
-                                <input class="textbox require" id="input-password" type="password" name="loginPassword">
+                                <input class="textbox input-password require" type="password" name="loginPassword">
                                 <p class="label label-password">Password</p>
                             </div>
-                            <input class="submit" type="submit" value="ログイン">
+                            <div class="input-area">
+                                <input class="textbox input-password require" type="password" name="loginRePassword">
+                                <p class="label label-password">Password Confirmination</p>
+                            </div>
+                            <input class="submit" type="submit" value="アカウント作成">
                         </form>
                     </div>
                     <div class="register-form">
-                        <a href="/register" class="link register-link">アカウント新規作成</a>
-                    </div>
-                    <div class="reissue-form">
-                        <a href="/reissue" class="link reissue-link">ID/Passwordを忘れた場合</a>
+                        <a href="/" class="link register-link">トップへ戻る</a>
                     </div>
                 </div>
             </div>
