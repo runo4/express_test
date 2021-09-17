@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet"  href="css/style.css">
+        <title>top</title>
+    </head>
+    <body>
+        <header></header>
+        <div class="main-wrapper">
+            <div class="container">
+                <div class="heading">
+                    <h1>Node.js勉強用テスト会員ページ</h1>
+                </div>
+                <div class="body">
+                    <div class="login-form">
+                        <form class="form" action="/login" method="post">
+                            <div class="input-area">
+                                <input class="textbox input-id" type="text" name="loginId">
+                                <p class="label label-id">ID</p>
+                            </div>
+                            <div class="input-area">
+                                <input class="textbox input-password" type="password" name="loginPassword">
+                                <p class="label label-password">Password</p>
+                            </div>
+                            <input class="submit" type="submit" value="ログイン">
+                        </form>
+                    </div>
+                    <div class="register-form">
+                        <a href="/register" class="link register-link">アカウント新規作成</a>
+                    </div>
+                    <div class="reissue-form">
+                        <a href="/reissue" class="link reissue-link">ID/Passwordを忘れた場合</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer></footer>
+    </body>
+</html>
