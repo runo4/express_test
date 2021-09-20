@@ -52,6 +52,7 @@ body, html{
 
 .textbox{
     margin-top: 10px;
+    padding-left: 20px;
     width: 80%;
     height: 2em;
     border-top: none;
@@ -60,6 +61,7 @@ body, html{
     border-bottom: 2px solid #aaa;
 
     font-size: 16px;
+    letter-spacing: 3px;
 }
 
 .textbox:hover{
@@ -68,6 +70,14 @@ body, html{
 
 .textbox:focus{
     outline: none;
+}
+
+#input-password{
+    font-size: 1.2em;
+}
+
+.error-message{
+    color: rgb(255, 51, 51);
 }
 
 .submit{
@@ -85,6 +95,11 @@ body, html{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     cursor: pointer;
+}
+
+.submit:disabled{
+    pointer-events: none;
+    opacity: 0.5;
 }
 
 .register-form{

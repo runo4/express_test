@@ -18,12 +18,15 @@
                     <div class="login-form">
                         <form class="form" action="/" method="post">
                             <div class="input-area">
-                                <input class="textbox require" id="input-id"type="text" name="loginId">
+                                <input class="textbox require" id="input-id" type="text" name="loginId" value="<%= userId ? userId : '' %>">
                                 <p class="label label-id">ID</p>
                             </div>
                             <div class="input-area">
                                 <input class="textbox require" id="input-password" type="password" name="loginPassword">
                                 <p class="label label-password">Password</p>
+                            </div>
+                            <div class="error-message">
+                                <p><%= errMessage ? errMessage : "" %></p>
                             </div>
                             <input class="submit" type="submit" value="ログイン">
                         </form>

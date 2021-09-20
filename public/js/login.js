@@ -1,13 +1,14 @@
 $(function(){
-    $(".submit").disabled = true;
+    buttonSubmit = $(".submit")[0];
+    buttonSubmit.disabled = true;
 
     $("#input-id, #input-password").on("keyup", () => {
         const strId = $("#input-id").val();
         const strPassword = $("#input-password").val();
         if(strId && strPassword){
-            $(".submit").disabled = false;
+            buttonSubmit.disabled = false;
         }else{
-            $(".submit").disabled = true;
+            buttonSubmit.disabled = true;
         }
     });
 });
