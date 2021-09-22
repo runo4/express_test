@@ -5,10 +5,9 @@
         <link rel="stylesheet"  href="css/style.css">
         <title>アカウント新規作成</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+        <script src="js/register.js"></script>
     </head>
     <body>
-        <header></header>
         <div class="main-wrapper">
             <div class="container">
                 <div class="heading">
@@ -16,17 +15,28 @@
                 </div>
                 <div class="body">
                     <div class="login-form">
-                        <form class="form" action="/" method="post">
+                        <form class="form" action="/register" method="post">
+                            <% if(errMessages){ %>
+                            <div class="error-message">
+                                <% errMessages.forEach((errMessage) => { %>
+                                <p><%= errMessage %></p>
+                                <% }); %>
+                            </div>
+                            <% } %>
                             <div class="input-area">
-                                <input class="textbox input-id require" type="text" name="loginId">
-                                <p class="label label-id">ID</p>
+                                <input class="textbox input-username require" id="input-username" type="text" name="loginUserName" placeholder="~24 characters">
+                                <p class="label label-username">User Name</p>
                             </div>
                             <div class="input-area">
-                                <input class="textbox input-password require" type="password" name="loginPassword">
+                                <input class="textbox input-id require" id="input-id" type="text" name="loginId" placeholder="4~24 characters">
+                                <p class="label label-id">User ID</p>
+                            </div>
+                            <div class="input-area">
+                                <input class="textbox input-password require" id="input-password" type="password" name="loginPassword" placeholder="8~32 characters">
                                 <p class="label label-password">Password</p>
                             </div>
                             <div class="input-area">
-                                <input class="textbox input-password require" type="password" name="loginRePassword">
+                                <input class="textbox input-password require" id="input-rePassword" type="password" name="loginRePassword" placeholder="Same as Password">
                                 <p class="label label-password">Password Confirmination</p>
                             </div>
                             <input class="submit" type="submit" value="アカウント作成">
@@ -38,6 +48,5 @@
                 </div>
             </div>
         </div>
-        <footer></footer>
     </body>
 </html>

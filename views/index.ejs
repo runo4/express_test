@@ -5,18 +5,28 @@
         <link rel="stylesheet"  href="css/style.css">
         <title>top</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="js/login.js"></script>
     </head>
     <body>
-        <header></header>
+        <header>
+            <div class="header-nav">
+                <div class="header-left">
+                    <a href="/">Top</a>
+                    <p>ようこそ、<%= locals.userName %>さん</p>
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <li><a href="/profile">Profile</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
         <div class="main-wrapper">
             <div class="container">
                 <div class="heading">
                     <h1>Node.js勉強用テスト会員ページ</h1>
                 </div>
                 <div class="body">
-                    <p>ログイン成功</p>
-                    <p>ようこそ、<%= locals.userName %>さん</p>
                 </div>
             </div>
         </div>
